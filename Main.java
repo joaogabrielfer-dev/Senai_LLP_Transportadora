@@ -17,6 +17,7 @@ public class Main {
         System.out.println("Digite o nome de Sua receita: ");
         receita = ler.nextLine();
 
+        // while para adição dos ingredientes
         while (true) {
             System.out.printf("\n\nDigite o %d ingrediente de sua receita: ", contador2);
             System.out.println("\nCaso Deseje finalizar a adição de ingredientes não digite nada e aperte ENTER.");
@@ -32,7 +33,7 @@ public class Main {
 
             contador2++;
         }
-
+        // while para adicão dos passo a passos
         while (true) {
             System.out.printf("%d passo: ", contador);
             System.out.println("\nCaso Deseje finalizar a adição de passos não digite nada e aperte ENTER.");
@@ -58,6 +59,7 @@ public class Main {
             System.out.println((i +1) + ". " + passoapasso.get(i));
         }
 
+        // Parte qua baixa o arquivo em formato .txt no pc
         try {
 
             FileWriter arquivo = new FileWriter(receita + ".txt");
