@@ -38,30 +38,15 @@ public class Transportadora {
 
         System.out.printf(
                 "\nFrete Caminhão: R$ %.2f",
-                calcularFreteTransporte(
-                        caminhao,
-                        peso,
-                        altura,
-                        largura,
-                        distancia));
+                calcularFreteTransporte(caminhao,peso,altura,largura,distancia));
 
         System.out.printf(
                 "\nFrete Avião: R$ %.2f",
-                calcularFreteTransporte(
-                        aviao,
-                        peso,
-                        altura,
-                        largura,
-                        distancia));
+                calcularFreteTransporte(aviao,peso,altura,largura,distancia));
 
         System.out.printf(
                 "\nFrete PortaContainer: R$ %.2f",
-                calcularFreteTransporte(
-                        portaContainer,
-                        peso,
-                        altura,
-                        largura,
-                        distancia));
+                calcularFreteTransporte(portaContainer,peso,altura,largura,distancia));
 
         ler.close();
     }
@@ -245,8 +230,7 @@ class Caminhao extends VeiculoTerrestre {
             double largura,
             double distancia) {
 
-        return (peso + (altura * largura))
-                * (distancia * 6.99);
+        return (peso + (altura * largura)) * (distancia * 6.99);
     }
 }
 
@@ -278,8 +262,7 @@ class Aviao extends VeiculoAereo {
             double largura,
             double distancia) {
 
-        return ((peso * peso) * (altura * largura))
-                * (distancia * 9.99);
+        return ((peso * peso) * (altura * largura)) * (distancia * 9.99);
     }
 }
 
